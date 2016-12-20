@@ -2325,7 +2325,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
 
                     switch (((PlayerActionPacket) packet).action) {
                         case PlayerActionPacket.ACTION_START_BREAK:
-                            if (this.lastBreak != Long.MAX_VALUE || pos.distanceSquared(this) > 10000) {
+                            if (this.lastBreak != Integer.MAX_VALUE || pos.distanceSquared(this) > 10000) {
                                 break;
                             }
                             Block target = this.level.getBlock(pos);
